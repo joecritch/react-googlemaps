@@ -1,9 +1,9 @@
 "use strict";
 
 var assign = require('react/lib/Object.assign');
-var ReactDefaultInjection = require('./src/ui/ReactDefaultInjection');
-var ReactMapComponents = require('./src/ReactMapComponents');
-var MapPropTypes = require('./src/ui/MapPropTypes');
+var ReactDefaultInjection = require('./build/ui/ReactDefaultInjection');
+var ReactMapComponents = require('./build/ReactMapComponents');
+var MapPropTypes = require('./build/ui/MapPropTypes');
 
 ReactDefaultInjection.inject();
 
