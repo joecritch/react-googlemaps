@@ -28,11 +28,19 @@
     "jsx-loader": "^0.12.2",
     "react": ">=0.12.1",
     "react-tools": "^0.13.2",
-    "webpack": "^1.3.7"
+    "webpack": "^1.3.7",
+    "react-tools": "^0.12.2",
+    "webpack": "^1.3.7",
+    "react": "~0.14.0",
+    "invariant": "~2.1.1",
+    "fbjs": "~0.3.1",
+    "react-dom": "~0.14.0",
+    "react-addons-update": "~0.14.0"
+>>>>>>> Update project to be compatible with React 0.14
   },
   "peerDependencies": {
-    "react": ">=0.12.1",
-    "reactify": ">=0.17.1"
+    "react": "^0.14.0",
+    "reactify": "^1.0.0"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/preprocessor.js",
