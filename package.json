@@ -1,6 +1,6 @@
 {
   "name": "react-googlemaps",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A declarative React interface to Google Maps",
   "keywords": [
     "react",
@@ -40,18 +40,12 @@
     "react-tools": "^0.12.2"
   },
   "peerDependencies": {
-    "react": "^0.14.0",
-    "reactify": "^1.0.0"
+    "react": "^0.14.0"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/preprocessor.js",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react"
-    ]
-  },
-  "browserify": {
-    "transform": [
-      "reactify"
     ]
   }
 }
