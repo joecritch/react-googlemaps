@@ -2,7 +2,7 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var assign = require('react/lib/Object.assign');
+var assign = require('object-assign');
 var cloneWithProps = require('react/lib/cloneWithProps');
 var GoogleMapsAPI = require('../../GoogleMapsAPI');
 var MapPropTypes = require('../MapPropTypes');

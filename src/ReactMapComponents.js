@@ -1,6 +1,6 @@
 "use strict";
 
-var assign = require('react/lib/Object.assign');
+var assign = require('object-assign');
 var mapObject = require('fbjs/lib/mapObject');
 var GoogleMapsAPI = require('./GoogleMapsAPI');
 var ReactMapComponent = require('./ui/ReactMapComponent');

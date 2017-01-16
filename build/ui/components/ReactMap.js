@@ -2,12 +2,13 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var cloneWithProps = require('react/lib/cloneWithProps');
+// var cloneWithProps = require('react/lib/cloneWithProps');
 var keyMirror = require('fbjs/lib/keyMirror');
 var ReactMapComponents = require('../../ReactMapComponents');
 var MapPropTypes = require('../MapPropTypes');
 var PropTypeUtils = require('../../utils/PropTypeUtils');
 var ReactFrag = require('./ReactFrag');
+var assign = require('object-assign');
 
 var GoogleMapsMap = ReactMapComponents.Map;
 
@@ -53,11 +54,11 @@ var ReactMap = React.createClass({displayName: "ReactMap",
     var map;
     if (this.state.mapLifeCycleState !== MapLifeCycle.CREATING_HOLDER) {
       map = (
-        React.createElement(GoogleMapsMap, React.__spread({}, 
-          this.props, 
-          {ref: "map", 
-          mapDiv: this.refs.mapHolder, 
-          width: null, 
+        React.createElement(GoogleMapsMap, assign({},
+          this.props,
+          {ref: "map",
+          mapDiv: this.refs.mapHolder,
+          width: null,
           height: null}))
       );
     }
@@ -65,19 +66,19 @@ var ReactMap = React.createClass({displayName: "ReactMap",
     var children;
     if (!this.state.mapLifeCycleState) {
       children = (
-        React.createElement(ReactFrag, {map: this.refs.map.__node}, 
+        React.createElement(ReactFrag, {map: this.refs.map.__node},
           this.props.children
         )
       );
     }
 
     return (
-      React.createElement("div", null, 
+      React.createElement("div", null,
         React.createElement("div", {
-          ref: "mapHolder", 
-          className: this.props.className, 
-          style: holderStyle}), 
-          map, 
+          ref: "mapHolder",
+          className: this.props.className,
+          style: holderStyle}),
+          map,
           children
       )
       );
